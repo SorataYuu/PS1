@@ -25,6 +25,27 @@ class BreadthFirstOrderGeneratorTests : XCTestCase {
             ["A", "B", "C", "E", "D", "F", "G"],
             "The BFS for \(graphFileName) is wrong!")
     }
+    
+    func testEmptyGraph() {
+        let graphFileName = "graph_empty"
+        XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "0"),
+                       ["0"],
+                       "The BFS for \(graphFileName) is wrong!")
+    }
+    
+    func testDirectedUnconnectedGraph() {
+        let graphFileName = "graph_directed_unconnected"
+        XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "0"),
+                       ["0", "1", "2", "4", "3"],
+                       "The BFS for \(graphFileName) is wrong!")
+    }
+    
+    func testDirectedGraph() {
+        let graphFileName = "graph_directed_example1"
+        XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "0"),
+                       ["0", "1", "5", "2", "4", "3"],
+                       "The BFS for \(graphFileName) is wrong!")
+    }
 
     private func getResultantNodesForGraph(_ fileName: String, startNode: String) -> [String] {
         // You do not need to modify this function.

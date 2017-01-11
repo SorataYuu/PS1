@@ -71,4 +71,29 @@ class StackTests : XCTestCase {
         stack.push(3)
         XCTAssertEqual(stack.toArray(), [3,2,1], "The stack's toArray() is not correct!");
     }
+    
+    func testErrorThrowing() {
+        var stack = Stack<Int>()
+        
+        XCTAssertThrowsError(try stack.pop(), "The stack does not handle errors properly")
+        XCTAssertThrowsError(try stack.peek(), "The stack does not handle errors properly")
+    }
+    
+    func testIntegrationTest() {
+        var stack = Stack<String>()
+        
+        XCTAssertThrowsError(try stack.pop(), "The queue does not handle errors properly")
+        XCTAssertEqual(stack.isEmpty, true, "The queue does not check emptiness correctly!")
+        
+        stack.push("1")
+        XCTAssertEqual(stack.count, 1, "The queue's length is not correct!");
+        
+        stack.push("2")
+        try XCTAssertEqual(stack.peek(), "2", "The item is not peeked correctly!")
+        try XCTAssertEqual(stack.pop(), "2", "The item is not dequeued correctly!")
+        XCTAssertEqual(stack.toArray(), ["1"], "The item is not enqueued correctly!")
+        
+        stack.removeAll()
+        XCTAssertThrowsError(try stack.peek(), "The queue does not handle errors properly")
+    }
 }

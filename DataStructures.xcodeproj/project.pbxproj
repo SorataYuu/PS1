@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC944971E25EC130010FA84 /* graph_directed_unconnected.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC944961E25EC130010FA84 /* graph_directed_unconnected.plist */; };
+		3FC944981E25EC240010FA84 /* graph_directed_unconnected.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC944961E25EC130010FA84 /* graph_directed_unconnected.plist */; };
+		3FC9449A1E25ECCC0010FA84 /* graph_directed_example1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC944991E25ECCC0010FA84 /* graph_directed_example1.plist */; };
+		3FC9449B1E25ECD30010FA84 /* graph_directed_example1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC944991E25ECCC0010FA84 /* graph_directed_example1.plist */; };
+		3FC9449D1E25EEF50010FA84 /* graph_directed_example2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9449C1E25EEF50010FA84 /* graph_directed_example2.plist */; };
+		3FC9449E1E25EEFC0010FA84 /* graph_directed_example2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9449C1E25EEF50010FA84 /* graph_directed_example2.plist */; };
+		3FC944A01E25F0330010FA84 /* graph_empty.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9449F1E25F0330010FA84 /* graph_empty.plist */; };
+		3FC944A11E25F03E0010FA84 /* graph_empty.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9449F1E25F0330010FA84 /* graph_empty.plist */; };
 		412A0AA91A5FDEB5002B6B25 /* Dictionary+TraversableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A0AA81A5FDEB5002B6B25 /* Dictionary+TraversableTests.swift */; };
 		412A0AAB1A5FDFAA002B6B25 /* DepthFirstOrderGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A0AAA1A5FDFAA002B6B25 /* DepthFirstOrderGeneratorTests.swift */; };
 		413DC05F1A5F62C300CC4AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DC05E1A5F62C300CC4AC3 /* AppDelegate.swift */; };
@@ -38,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FC944961E25EC130010FA84 /* graph_directed_unconnected.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graph_directed_unconnected.plist; sourceTree = "<group>"; };
+		3FC944991E25ECCC0010FA84 /* graph_directed_example1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graph_directed_example1.plist; sourceTree = "<group>"; };
+		3FC9449C1E25EEF50010FA84 /* graph_directed_example2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graph_directed_example2.plist; sourceTree = "<group>"; };
+		3FC9449F1E25F0330010FA84 /* graph_empty.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graph_empty.plist; sourceTree = "<group>"; };
 		412A0AA81A5FDEB5002B6B25 /* Dictionary+TraversableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+TraversableTests.swift"; sourceTree = "<group>"; };
 		412A0AAA1A5FDFAA002B6B25 /* DepthFirstOrderGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthFirstOrderGeneratorTests.swift; sourceTree = "<group>"; };
 		413DC0591A5F62C300CC4AC3 /* DataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +154,10 @@
 			children = (
 				6DD36A2E1A60E90800746BF6 /* graph_cycle.plist */,
 				6DD36A301A60E90800746BF6 /* graph_example.plist */,
+				3FC9449F1E25F0330010FA84 /* graph_empty.plist */,
+				3FC944961E25EC130010FA84 /* graph_directed_unconnected.plist */,
+				3FC944991E25ECCC0010FA84 /* graph_directed_example1.plist */,
+				3FC9449C1E25EEF50010FA84 /* graph_directed_example2.plist */,
 				6DD36A351A60E90800746BF6 /* graph_linkedlist.plist */,
 				413DC0731A5F62C300CC4AC3 /* Info.plist */,
 			);
@@ -232,6 +248,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC944A11E25F03E0010FA84 /* graph_empty.plist in Resources */,
+				3FC9449E1E25EEFC0010FA84 /* graph_directed_example2.plist in Resources */,
+				3FC9449B1E25ECD30010FA84 /* graph_directed_example1.plist in Resources */,
+				3FC944981E25EC240010FA84 /* graph_directed_unconnected.plist in Resources */,
 				765CFB9A1C37DE7600FA2E0E /* graph_cycle.plist in Resources */,
 				765CFB9B1C37DE7600FA2E0E /* graph_example.plist in Resources */,
 				765CFB9C1C37DE7600FA2E0E /* graph_linkedlist.plist in Resources */,
@@ -245,6 +265,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC9449D1E25EEF50010FA84 /* graph_directed_example2.plist in Resources */,
+				3FC944971E25EC130010FA84 /* graph_directed_unconnected.plist in Resources */,
+				3FC9449A1E25ECCC0010FA84 /* graph_directed_example1.plist in Resources */,
+				3FC944A01E25F0330010FA84 /* graph_empty.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

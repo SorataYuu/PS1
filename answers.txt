@@ -2,8 +2,8 @@
 # CS3217 Problem Set 1 #
 ########################
 
-# Name: 
-# Matric No:
+# Name: Jeremy Jee De Sheng
+# Matric No: A0139963N
 # Tutor:
 
 ###################################
@@ -14,4 +14,4 @@ Question:
 Dictionary keys must conform to the Hashable protocol. Why is this necessary?
 
 Answer:
-Your Answer here
+Each Dictionary Key must point to a unique value within the Dictionary. In order for each Dictionary Key to point to a unique value, it has to be Hashable to prevent two different keys from linking to the same value and also to ensure that the key can be linked to a value in the first place.

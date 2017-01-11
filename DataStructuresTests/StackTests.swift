@@ -13,11 +13,24 @@ class StackTests : XCTestCase {
     }
 
     func testPop() {
-        // TODO: Fill in your test code here.
+        var stack = Stack<Int>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        
+        try XCTAssertEqual(stack.pop(), 3, "The item is not popped correctly!")
+        try XCTAssertEqual(stack.pop(), 2, "The item is not popped correctly!")
+        try XCTAssertEqual(stack.pop(), 1, "The item is not popped correctly!")
     }
 
     func testPeek() {
-        // TODO: Fill in your test code here.
+        var stack = Stack<Int>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        
+        try XCTAssertEqual(stack.peek(), 3, "The item is not peeked correctly!")
+        try XCTAssertEqual(stack.peek(), 3, "The item is not peeked correctly!")
     }
 
     func testCount() {
@@ -29,14 +42,33 @@ class StackTests : XCTestCase {
     }
 
     func testIsEmpty() {
-        // TODO: Fill in your test code here.
+        var stack = Stack<Int>()
+        XCTAssertEqual(stack.isEmpty, true, "The stack's emptiness is not correct!");
+        
+        stack.push(1)
+        XCTAssertEqual(stack.isEmpty, false, "The stack's emptiness is not correct!");
+        
+        let _ = try? stack.pop()
+        
+        XCTAssertEqual(stack.isEmpty, true, "The stack's emptiness is not correct!");
+        
     }
 
     func testRemoveAll() {
-        // TODO: Fill in your test code here.
+        var stack = Stack<Int>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        stack.removeAll()
+        XCTAssertEqual(stack.isEmpty, true, "The stack's removeAll() is not correct!");
+        
     }
 
     func testToArray() {
-        // TODO: Fill in your test code here.
+        var stack = Stack<Int>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        XCTAssertEqual(stack.toArray(), [3,2,1], "The stack's toArray() is not correct!");
     }
 }

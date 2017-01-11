@@ -13,11 +13,23 @@ class QueueTests : XCTestCase {
     }
 
     func testDequeue() {
-        // TODO: Fill in your test code here.
+        var queue = Queue<String>()
+        queue.enqueue("1")
+        queue.enqueue("2")
+        queue.enqueue("3")
+        
+        try XCTAssertEqual(queue.dequeue(), "1", "The item is not dequeued correctly!")
+        try XCTAssertEqual(queue.dequeue(), "2", "The item is not dequeued correctly!")
     }
 
     func testPeek() {
-        // TODO: Fill in your test code here.
+        var queue = Queue<String>()
+        queue.enqueue("1")
+        queue.enqueue("2")
+        queue.enqueue("3")
+        
+        try XCTAssertEqual(queue.peek(), "1", "The item is not peeked correctly!")
+        try XCTAssertEqual(queue.peek(), "1", "The item is not peeked correctly!")
     }
 
     func testCount() {
@@ -29,14 +41,35 @@ class QueueTests : XCTestCase {
     }
 
     func testIsEmpty() {
-        // TODO: Fill in your test code here.
+        var queue = Queue<String>()
+        
+        XCTAssertEqual(queue.isEmpty, true, "The queue does not check emptiness correctly!")
+        
+        queue.enqueue("1")
+        
+        XCTAssertEqual(queue.isEmpty, false, "The queue does not check emptiness correctly!")
+        
+        let _ = try? queue.dequeue()
+        
+        XCTAssertEqual(queue.isEmpty, true, "The queue does not check emptiness correctly!")
     }
 
     func testRemoveAll() {
-        // TODO: Fill in your test code here.
+        var queue = Queue<String>()
+        queue.enqueue("1")
+        queue.enqueue("2")
+        queue.enqueue("3")
+        
+        queue.removeAll()
+        XCTAssertEqual(queue.isEmpty, true, "The queue does not removeAll() correctly!")
     }
 
     func testToArray() {
-        // TODO: Fill in your test code here.
+        var queue = Queue<String>()
+        queue.enqueue("1")
+        queue.enqueue("2")
+        queue.enqueue("3")
+        
+        XCTAssertEqual(queue.toArray(), ["1", "2", "3"], "The queue does not toArray() correctly!")
     }
 }

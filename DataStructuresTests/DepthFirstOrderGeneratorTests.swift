@@ -36,7 +36,7 @@ class DepthFirstOrderGeneratorTests : XCTestCase {
     func testDirectedUnconnectedGraph() {
         let graphFileName = "graph_directed_unconnected"
         XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "0"),
-                       ["0", "1", "2", "4", "3"],
+                       ["0", "1", "2", "4", "3", "6", "5", "8", "7"],
                        "The DFS for \(graphFileName) is wrong!")
     }
     
@@ -50,7 +50,7 @@ class DepthFirstOrderGeneratorTests : XCTestCase {
     func testDirectedGraph2() {
         let graphFileName = "graph_directed_example2"
         XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "0"),
-                       ["0", "1", "5", "4", "2", "3"],
+                       ["0", "1", "5", "4", "2", "3", "6"],
                        "The DFS for \(graphFileName) is wrong!")
     }
 

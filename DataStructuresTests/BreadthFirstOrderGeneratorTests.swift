@@ -36,7 +36,7 @@ class BreadthFirstOrderGeneratorTests : XCTestCase {
     func testDirectedUnconnectedGraph() {
         let graphFileName = "graph_directed_unconnected"
         XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "0"),
-                       ["0", "1", "2", "4", "3"],
+                       ["0", "1", "2", "4", "3", "6", "5", "7", "8"],
                        "The BFS for \(graphFileName) is wrong!")
     }
     

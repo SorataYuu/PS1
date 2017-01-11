@@ -25,7 +25,19 @@
 	</array>
 	<key>5</key>
 	<array>
-		<string>0</string>
+        <string>0</string>
+        <string>8</string>
 	</array>
+	<key>6</key>
+    <array>
+        <string>5</string>
+        <string>7</string>
+    </array>
+    <key>7</key>
+    <array>
+        <string>0</string>
+    </array>
+    <key>8</key>
+    <array/>
 </dict>
 </plist>

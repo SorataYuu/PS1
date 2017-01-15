@@ -14,4 +14,4 @@ Question:
 Dictionary keys must conform to the Hashable protocol. Why is this necessary?
 
 Answer:
-Each Dictionary Key must point to a unique value within the Dictionary. In order for each Dictionary Key to point to a unique value, it has to be Hashable to prevent two different keys from linking to the same value and also to ensure that the key can be linked to a value in the first place.
+Each Dictionary Key must point to a unique value within the Dictionary. In order for each Dictionary Key to point to a unique value, it has to be Hashable to prevent two different keys from linking to the same value and also to ensure that the key can be linked to a value in the first place. Being Hashable means that the key is able to be mapped to a value, and using the same key would result in a mapping to the same value. This ensures that you are able to retrieve values using their key, and ensures that the correct key is linked to the correct value. If a key is not hashable, this key to value mapping will not be possible for certain reasons such as keys mapping to the same value or not being able to retrieve a value even with the corresponding key.

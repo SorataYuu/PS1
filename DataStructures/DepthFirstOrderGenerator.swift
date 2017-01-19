@@ -7,7 +7,7 @@
  - Authors: CS3217
  - Date: 2017
  */
-struct DepthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorProtocol, Sequence where Value.Iterator.Element == Key {
+public struct DepthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorProtocol, Sequence where Value.Iterator.Element == Key {
     
     var stack = Stack<Key>()
     var visited = [Key]()
@@ -53,11 +53,11 @@ struct DepthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorProt
         }
     }
 
-    func makeIterator() -> DepthFirstOrderGenerator<Key, Value> {
+    public func makeIterator() -> DepthFirstOrderGenerator<Key, Value> {
         return self
     }
 
-    mutating func next() -> Key? {
+    mutating public func next() -> Key? {
         position += 1
         
         guard position < visited.count else {

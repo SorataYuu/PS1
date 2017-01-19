@@ -3,7 +3,7 @@
 /**
  An enum of errors that can be thrown from the `Stack` struct.
  */
-enum StackError: Error {
+public enum StackError: Error {
     /// Thrown when trying to access an element from an empty stack.
     case emptyStack
 }
@@ -14,20 +14,24 @@ enum StackError: Error {
  - Authors: CS3217
  - Date: 2017
  */
-struct Stack<T> {
+public struct Stack<T> {
     
     var stack = [T]()
     
+    public init() {
+        
+    }
+    
     /// Adds an element to the top of the stack.
     /// - Parameter item: The element to be added to the stack
-    mutating func push(_ item: T) {
+    mutating public func push(_ item: T) {
         stack.append(item)
     }
 
     /// Removes the element at the top of the stack and return it.
     /// - Returns: element at the top of the stack
     /// - Throws: StackError.EmptyStack
-    mutating func pop() throws -> T {
+    mutating public func pop() throws -> T {
         if stack.isEmpty {
             throw StackError.emptyStack
         }
@@ -38,7 +42,7 @@ struct Stack<T> {
     /// Returns, but does not remove, the element at the top of the stack.
     /// - Returns: element at the top of the stack
     /// - Throws: StackError.EmptyStack
-    func peek() throws -> T {
+    public func peek() throws -> T {
         if stack.isEmpty {
             throw StackError.emptyStack
         }
@@ -47,24 +51,24 @@ struct Stack<T> {
     }
 
     /// The number of elements currently in the stack.
-    var count: Int {
+    public var count: Int {
         return stack.count
     }
 
     /// Whether the stack is empty.
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return stack.isEmpty
     }
 
     /// Removes all elements in the stack.
-    mutating func removeAll() {
+    mutating public func removeAll() {
         stack.removeAll()
     }
 
     /// Returns an array of the elements in their respective pop order, i.e.
     /// first element in the array is the first element to be popped.
     /// - Returns: array of elements in their respective pop order
-    func toArray() -> [T] {
+    public func toArray() -> [T] {
         return stack.reversed()
     }
 }

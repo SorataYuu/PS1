@@ -3,7 +3,7 @@
 /**
  An enum of errors that can be thrown from the `Queue` struct.
  */
-enum QueueError: Error {
+public enum QueueError: Error {
     /// Thrown when trying to access an element from an empty queue.
     case emptyQueue
 }
@@ -15,20 +15,24 @@ enum QueueError: Error {
  - Authors: CS3217
  - Date: 2017
  */
-struct Queue<T> {
+public struct Queue<T> {
     
     var queue = [T]()
     
+    public init(){
+        
+    }
+    
     /// Adds an element to the tail of the queue.
     /// - Parameter item: The element to be added to the queue
-    mutating func enqueue(_ item: T) {
+    mutating public func enqueue(_ item: T) {
         queue.append(item)
     }
 
     /// Removes an element from the head of the queue and return it.
     /// - Returns: item at the head of the queue
     /// - Throws: QueueError.EmptyQueue
-    mutating func dequeue() throws -> T {
+    mutating public func dequeue() throws -> T {
         if queue.isEmpty{
             throw QueueError.emptyQueue
         }
@@ -39,7 +43,7 @@ struct Queue<T> {
     /// Returns, but does not remove, the element at the head of the queue.
     /// - Returns: item at the head of the queue
     /// - Throws: QueueError.EmptyQueue
-    func peek() throws -> T {
+    public func peek() throws -> T {
         if queue.isEmpty{
             throw QueueError.emptyQueue
         }
@@ -48,24 +52,24 @@ struct Queue<T> {
     }
 
     /// The number of elements currently in the queue.
-    var count: Int {
+    public var count: Int {
         return queue.count
     }
 
     /// Whether the queue is empty.
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return queue.isEmpty
     }
 
     /// Removes all elements in the queue.
-    mutating func removeAll() {
+    mutating public func removeAll() {
         queue.removeAll()
     }
 
     /// Returns an array of the elements in their respective dequeue order, i.e.
     /// first element in the array is the first element to be dequeued.
     /// - Returns: array of elements in their respective dequeue order
-    func toArray() -> [T] {
+    public func toArray() -> [T] {
         return queue
     }
 }

@@ -7,7 +7,7 @@
  - Authors: CS3217
  - Date: 2017
  */
-struct BreadthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorProtocol, Sequence where Value.Iterator.Element == Key {
+public struct BreadthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorProtocol, Sequence where Value.Iterator.Element == Key {
     
     var queue = Queue<Key>()
     var visited = [Key]()
@@ -64,11 +64,11 @@ struct BreadthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorPr
         }
     }
 
-    func makeIterator() -> BreadthFirstOrderGenerator<Key, Value> {
+    public func makeIterator() -> BreadthFirstOrderGenerator<Key, Value> {
         return self
     }
 
-    mutating func next() -> Key? {
+    mutating public func next() -> Key? {
         position += 1
         
         guard position < visited.count else {

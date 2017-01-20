@@ -17,7 +17,7 @@ public enum QueueError: Error {
  */
 public struct Queue<T> {
     
-    var queue = [T]()
+    private var queue = [T]()
     
     public init(){
         

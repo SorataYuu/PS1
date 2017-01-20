@@ -16,7 +16,7 @@ public enum StackError: Error {
  */
 public struct Stack<T> {
     
-    var stack = [T]()
+    private var stack = [T]()
     
     public init() {
         

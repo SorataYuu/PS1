@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://SorataYuu@bitbucket.org/cs3217/2017-ps1-a0139963n.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@bitbucket.org:cs3217/2017-ps1-a0139963n.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

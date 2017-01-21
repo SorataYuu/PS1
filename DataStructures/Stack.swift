@@ -43,11 +43,11 @@ public struct Stack<T> {
     /// - Returns: element at the top of the stack
     /// - Throws: StackError.EmptyStack
     public func peek() throws -> T {
-        if stack.isEmpty {
+        guard let last = stack.last else {
             throw StackError.emptyStack
         }
         
-        return stack.last!
+        return last
     }
 
     /// The number of elements currently in the stack.

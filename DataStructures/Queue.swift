@@ -44,11 +44,12 @@ public struct Queue<T> {
     /// - Returns: item at the head of the queue
     /// - Throws: QueueError.EmptyQueue
     public func peek() throws -> T {
-        if queue.isEmpty{
+        
+        guard let first = queue.first else {
             throw QueueError.emptyQueue
         }
         
-        return queue.first!
+        return first
     }
 
     /// The number of elements currently in the queue.
